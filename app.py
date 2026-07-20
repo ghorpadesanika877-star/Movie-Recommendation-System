@@ -4,6 +4,31 @@ import pickle
 import os
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
+# Custom CSS for UI Decoration
+st.markdown("""
+    <style>
+    /* background color dark / stylish tone */
+    .stApp {
+        background-color: #0E1117;
+        color: #FFFFFF;
+    }
+    /* Title Styling */
+    h1 {
+        color: #FF4B4B;
+        text-align: center;
+        font-family: 'Helvetica', sans-serif;
+    }
+    /* Button Styling */
+    div.stButton > button:first-child {
+        background-color: #FF4B4B;
+        color: white;
+        font-size: 18px;
+        border-radius: 10px;
+        width: 100%;
+        height: 50px;
+    }
+    </style>
+""", unsafe_allow_html=True)
 st.title("🎬 Movie Recommendation System")
 
 df = pd.read_csv('final_movie_data1.csv')
